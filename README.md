@@ -34,6 +34,8 @@ void setup() {
 }
 
 void loop() {
+
+ //SENSOR CODE 
   
   digitalWrite(Trigger_sensor1, LOW);
   delayMicroseconds(2);   
@@ -41,6 +43,8 @@ void loop() {
   delayMicroseconds(10);
   duration1 = pulseIn(Echo_sensor1, HIGH); 
   distance1 = duration1 / 58.8;
+  
+ // CALUCLATES DISTANCE BETWEEN ROVER AND OBSTACLE
   
   digitalWrite(Trigger_sensor2, LOW);
   delayMicroseconds(2);
@@ -53,23 +57,30 @@ void loop() {
   Serial.println(distance1);
   Serial.println(distance2);
 
-if(distance1 > 25)
-    {
-    digitalWrite(Left_t1, HIGH); // Move Forward
+if(distance1 > 25){
+
+        // MOVE FORWARD
+        
+    digitalWrite(Left_t1, HIGH); 
     digitalWrite(Left_t2, LOW);
     digitalWrite(Right_t1, HIGH);                                
     digitalWrite(Right_t2, LOW);
     }
-if( distance1 < 25 && distance1 > 10)
-    {
+if( distance1 < 25 && distance1 > 10){
     if(distance2 > 25){
-    digitalWrite(Left_t1, HIGH); //TURN RIGHT
+    
+        //TURN RIGHT
+        
+    digitalWrite(Left_t1, HIGH); 
     digitalWrite(Left_t2, LOW);
     digitalWrite(Right_t1, LOW);                                
     digitalWrite(Right_t2, LOW);
     delay(1000);}
     if(distance2 < 25){
-    digitalWrite(Left_t1, LOW); // TURN LEFT
+    
+        // TURN LEFT
+        
+    digitalWrite(Left_t1, LOW); 
     digitalWrite(Left_t2, LOW);
     digitalWrite(Right_t1, HIGH);                                
     digitalWrite(Right_t2, LOW);
@@ -78,13 +89,19 @@ if( distance1 < 25 && distance1 > 10)
 if( distance1 < 10)
     {
     if(distance2 > 25){
-    digitalWrite(Left_t1, HIGH); //TURN RIGHT
+    
+        //TURN SHARP RIGHT
+        
+    digitalWrite(Left_t1, HIGH); 
     digitalWrite(Left_t2, LOW);
     digitalWrite(Right_t1, LOW);                                
     digitalWrite(Right_t2, HIGH);
     delay(1000);}
     if(distance2 < 25){
-    digitalWrite(Left_t1, LOW); // TURN LEFT
+    
+        // TURN SHARP LEFT
+    
+    digitalWrite(Left_t1, LOW); 
     digitalWrite(Left_t2, HIGH);
     digitalWrite(Right_t1, HIGH);                                
     digitalWrite(Right_t2, LOW);
