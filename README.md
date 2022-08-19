@@ -35,7 +35,7 @@ void setup() {
 
 void loop() {
 
- //SENSOR CODE 
+       //SENSOR CODE 
   
   digitalWrite(Trigger_sensor1, LOW);
   delayMicroseconds(2);   
@@ -44,7 +44,7 @@ void loop() {
   duration1 = pulseIn(Echo_sensor1, HIGH); 
   distance1 = duration1 / 58.8;
   
- // CALUCLATES DISTANCE BETWEEN ROVER AND OBSTACLE
+        // CALUCLATES DISTANCE BETWEEN ROVER AND OBSTACLE
   
   digitalWrite(Trigger_sensor2, LOW);
   delayMicroseconds(2);
@@ -54,12 +54,9 @@ void loop() {
   distance2 = duration2 / 58.8; 
   delay(100);
 
-  Serial.println(distance1);
-  Serial.println(distance2);
-
 if(distance1 > 25){
 
-        // MOVE FORWARD
+        //IT MOVES FORWARD IF NO OBSTACLE DETECTED
         
     digitalWrite(Left_t1, HIGH); 
     digitalWrite(Left_t2, LOW);
@@ -69,7 +66,7 @@ if(distance1 > 25){
 if( distance1 < 25 && distance1 > 10){
     if(distance2 > 25){
     
-        //TURN RIGHT
+        //TURNS RIGHT IF OBSATCLE IS DETECTED AT FRONT SENSOR
         
     digitalWrite(Left_t1, HIGH); 
     digitalWrite(Left_t2, LOW);
@@ -78,7 +75,7 @@ if( distance1 < 25 && distance1 > 10){
     delay(1000);}
     if(distance2 < 25){
     
-        // TURN LEFT
+        // TURNS LEFT IF OBSTACLE IS DETECTED AT BOTH SENSORS
         
     digitalWrite(Left_t1, LOW); 
     digitalWrite(Left_t2, LOW);
@@ -86,11 +83,10 @@ if( distance1 < 25 && distance1 > 10){
     digitalWrite(Right_t2, LOW);
     delay(1000);}
     }
-if( distance1 < 10)
-    {
+if( distance1 < 10){
     if(distance2 > 25){
     
-        //TURN SHARP RIGHT
+        //TURNS SHARP RIGHT IF SENSOR DETECTS OBSTACLE SUDDENLY
         
     digitalWrite(Left_t1, HIGH); 
     digitalWrite(Left_t2, LOW);
@@ -99,7 +95,7 @@ if( distance1 < 10)
     delay(1000);}
     if(distance2 < 25){
     
-        // TURN SHARP LEFT
+        // TURNS SHARP LEFTT IF BOTH SENSOR DETECTS OBSTACLE SUDDENLY
     
     digitalWrite(Left_t1, LOW); 
     digitalWrite(Left_t2, HIGH);
