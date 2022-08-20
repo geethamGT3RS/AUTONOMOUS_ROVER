@@ -7,13 +7,21 @@
    _______________________________________________________
    |  COMPONENTS                  |      QUANTITY        |
    <_____________________________________________________>   
+   
    | 1) Arduino Uno Board         |        x 1           |
+   
    | 2) Ultrasonic Sensor HC-SR04 |        x 2           |
+   
    | 3) Motor Driver              |        x 1           |
+   
    | 4) Motor With Gear           |        x 2           |
+   
    | 5) Wires(Male to Male)       |        x 8           |
+   
    | 6) Wires(Male to Female)     |        x 8           |
+   
    | 7) Batteries                 |        x 2           |
+   
    <_____________________________________________________>
    
  ************************* ASSEMBLY INSTRUCTIONS ***************************
@@ -25,6 +33,12 @@
  5) Try connect wires compactly as shown in circuit diagram,
  6) Postion Motor driver and connect correctly with pins,
  7) Tighten screws of arduino, front wheel and motor driver
+ 
+ ******************************* CREDITS ***********************************
+ 
+ 1) Arduino.cc - for code help and working of sensors,
+ 2) circuit.io - for circuit diagram,
+ 3) Arduino app for code development and upload to board.
  
  ***************************  SOURCE CODE  *********************************
  
