@@ -1,4 +1,34 @@
+
 # AUTONOMUS_ROVER
+
+
+
+***************************** HARDWARE USED *******************************
+   _______________________________________________________
+   |  COMPONENTS                  |      QUANTITY        |
+   <_____________________________________________________>   
+   | 1) Arduino Uno Board         |        x 1           |
+   | 2) Ultrasonic Sensor HC-SR04 |        x 2           |
+   | 3) Motor Driver              |        x 1           |
+   | 4) Motor With Gear           |        x 2           |
+   | 5) Wires(Male to Male)       |        x 8           |
+   | 6) Wires(Male to Female)     |        x 8           |
+   | 7) Batteries                 |        x 2           |
+   <_____________________________________________________>
+   
+ ************************* ASSEMBLY INSTRUCTIONS ***************************
+ 
+ 1) Assemble the cardboard car model given first,
+ 2) Then fit arduino onto top of model center,
+ 3) Attach motor with glue below,
+ 4) When assembeling sensor make they are distantly apart,
+ 5) Try connect wires compactly as shown in circuit diagram,
+ 6) Postion Motor driver and connect correctly with pins,
+ 7) Tighten screws of arduino, front wheel and motor driver
+ 
+ ***************************  SOURCE CODE  *********************************
+ 
+ 
 // SENSOR INPUT AND OUTPUT PINS
 
 int Trigger_sensor1 = 8;
